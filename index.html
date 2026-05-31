@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لؤلؤ البحر الأولى | أحدث الهواتف الذكية والإكسسوارات في طرابلس</title>
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="شركة لؤلؤ البحر الأولى لبيع وشراء الهواتف الذكية الحديثة والإكسسوارات الفاخرة أوفلاين. موقعنا: شارع المدار، طرابلس، ليبيا. تواصل معنا لتقييم هاتفك وبيع وشراء بأفضل الأسعار.">
+    <meta name="keywords" content="لؤلؤ البحر الأولى, هواتف طرابلس, بيع وشراء هواتف ليبيا, إكسسوارات هواتف طرابلس, شارع المدار, آيفون طرابلس, سامسونج طرابلس">
+    <meta name="author" content="لؤلؤ البحر الأولى">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="لؤلؤ البحر الأولى | وجهتك الأولى للهواتف الذكية">
+    <meta property="og:description" content="بيع وشراء الهواتف والإكسسوارات الفاخرة أوفلاين بأفضل الأسعار في طرابلس، ليبيا.">
+    <meta property="og:image" content="assets/logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet CSS for Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Floating WhatsApp & Phone Call Buttons -->
+    <div class="floating-actions">
+        <a href="https://wa.me/218917001415" target="_blank" class="floating-btn whatsapp-float" aria-label="تواصل عبر الواتساب" id="whatsapp-floating-trigger">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:0917001415" class="floating-btn call-float" aria-label="اتصل بنا الآن" id="call-floating-trigger">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="main-header">
+        <div class="container navbar-container">
+            <div class="logo-area">
+                <img src="assets/logo.png" alt="شعار لؤلؤ البحر الأولى" class="logo-img" id="brand-logo">
+                <span class="logo-text">لؤلؤ البحر <span class="gold-gradient-text">الأولى</span></span>
+            </div>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active" id="link-hero">الرئيسية</a></li>
+                    <li><a href="#about" class="nav-link" id="link-about">من نحن</a></li>
+                    <li><a href="#services" class="nav-link" id="link-services">خدماتنا</a></li>
+                    <li><a href="#catalog" class="nav-link" id="link-catalog">المعرض</a></li>
+                    <li><a href="#simulator" class="nav-link" id="link-simulator">قيم هاتفك</a></li>
+                    <li><a href="#contact" class="nav-link" id="link-contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="tel:0917001415" class="btn btn-gold" id="navbar-call-btn">
+                    <i class="fas fa-phone-alt"></i> <span>0917001415</span>
+                </a>
+                <button class="hamburger-menu" id="hamburger-btn" aria-label="القائمة">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-waves">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="rgba(10, 37, 72, 0.3)" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,144C672,149,768,203,864,229.3C960,256,1056,256,1152,240C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge-pearl"><i class="fas fa-gem"></i> بريق التميز والتقنية الحديثة</div>
+                <h1 class="hero-title">عالم الهواتف الذكية ببريق <span class="pearl-gradient-text">لؤلؤ البحر</span></h1>
+                <p class="hero-subtitle">
+                    وجهتك الرائدة في طرابلس لبيع وشراء الهواتف المحمولة والإكسسوارات الفاخرة أوفلاين. نوفر لك الجودة الفائقة والتقييم العادل لترقية هاتفك بكل أمان.
+                </p>
+                <div class="hero-actions">
+                    <a href="#catalog" class="btn btn-gold btn-lg" id="hero-action-browse">
+                        <i class="fas fa-store"></i> تصفح المعرض
+                    </a>
+                    <a href="#simulator" class="btn btn-outline btn-lg" id="hero-action-evaluate">
+                        <i class="fas fa-calculator"></i> قيّم هاتفك مجاناً
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num" id="stat-devices">5000+</span>
+                        <span class="stat-label">أجهزة تم تداولها</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" id="stat-customers">100%</span>
+                        <span class="stat-label">رضا العملاء</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" id="stat-guarantee">حقيقي</span>
+                        <span class="stat-label">ضمان وفحص فني</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="pearl-glow-effect"></div>
+                <div class="showcase-shell">
+                    <div class="floating-pearl-sphere"></div>
+                    <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=600&q=80" alt="هاتف آيفون حديث يعبر عن الفخامة" class="hero-phone-img" id="hero-showcase-phone">
+                    <div class="showcase-badge"><i class="fas fa-star text-gold"></i> معتمد ونظيف</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">من نحن</span>
+                <h2 class="section-title">فلسفة التميز: شركة لؤلؤ البحر الأولى</h2>
+                <div class="title-divider"><i class="fas fa-gem"></i></div>
+                <p class="section-desc">
+                    انطلقنا من قلب طرابلس لنصنع معياراً جديداً في بيع وشراء الهواتف الذكية. تماماً كاللؤلؤة التي تتشكل بعناية وقيمة عالية، نحرص على تقديم أجهزة وإكسسوارات تتميز بأعلى درجات الجودة وبمعاملات أوفلاين يسودها الأمان والشفافية الكاملة.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card" id="about-card-1">
+                    <div class="about-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>الأمان والشفافية</h3>
+                    <p>نتبع نظام فحص فني دقيق لكل جهاز يُباع أو يُشترى، مما يضمن حصولك على القيمة الحقيقية والأمان المطلق.</p>
+                </div>
+                <div class="about-card" id="about-card-2">
+                    <div class="about-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>أفضل تقييم أوفلاين</h3>
+                    <p>إذا كنت ترغب في بيع هاتفك القديم، نوفر لك تقييماً فورياً وعادلاً مبنياً على حالة السوق الحقيقية والدفع فوري ونقدي.</p>
+                </div>
+                <div class="about-card" id="about-card-3">
+                    <div class="about-icon"><i class="fas fa-award"></i></div>
+                    <h3>إكسسوارات حصرية</h3>
+                    <p>ننتقي لك أرقى الشواحن، السماعات، والجرابات التي تجمع بين الأداء العالي والتصميم الفاخر لتناسب أسلوب حياتك.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">خدماتنا المتميزة</span>
+                <h2 class="section-title">كيف نخدمك في صالتنا؟</h2>
+                <div class="title-divider"><i class="fas fa-gem"></i></div>
+            </div>
+
+            <div class="services-wrapper">
+                <!-- Service 1: Buy phones -->
+                <div class="service-row" id="service-row-buy">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=600&q=80" alt="شراء الهواتف الذكية" class="service-img">
+                    </div>
+                    <div class="service-content-wrap">
+                        <div class="service-badge"><i class="fas fa-cart-arrow-down"></i> نشتري منك</div>
+                        <h3 class="service-title-item">بيع هاتفك المستعمل بأعلى سعر فوري</h3>
+                        <p class="service-text">
+                            لا داعي للحيرة أو البحث الطويل، تفضل بزيارة صالتنا في شارع المدار وسيقوم خبراؤنا بفحص هاتفك خلال دقائق وتقديم أفضل سعر نقدًا. نشتري جميع الأنواع (iPhone, Samsung, Xiaomi) بحالاتها المختلفة.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle text-gold"></i> فحص فني سريع وموثوق أمام عينيك.</li>
+                            <li><i class="fas fa-check-circle text-gold"></i> تسليم فوري للمبلغ نقداً أو تحويل بنكي.</li>
+                            <li><i class="fas fa-check-circle text-gold"></i> إمكانية الاستبدال (ترقية) بهاتف أحدث بفارق بسيط.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2: Sell phones -->
+                <div class="service-row reverse" id="service-row-sell">
+                    <div class="service-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=600&q=80" alt="بيع الهواتف والإكسسوارات" class="service-img">
+                    </div>
+                    <div class="service-content-wrap">
+                        <div class="service-badge"><i class="fas fa-shopping-bag"></i> نبيع لك</div>
+                        <h3 class="service-title-item">أحدث الهواتف الذكية والإكسسوارات بضمان حقيقي</h3>
+                        <p class="service-text">
+                            نوفر لك أحدث الأجهزة الذكية العالمية فور إصدارها بأسعار منافسة. جميع هواتفنا مضمونة ومفحوصة، بالإضافة إلى تشكيلة واسعة ومختارة من الإكسسوارات التي تعبر عن هويتك وتوفر أقصى حماية لـهاتفك.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle text-gold"></i> ضمان استبدال وضمان تشغيل حقيقي.</li>
+                            <li><i class="fas fa-check-circle text-gold"></i> إكسسوارات أصلية من ماركات عالمية (Anker, Apple, Samsung).</li>
+                            <li><i class="fas fa-check-circle text-gold"></i> دعم فني ومساعدة مجانية في نقل البيانات وتهيئة الهاتف.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Catalog Section -->
+    <section class="catalog-section" id="catalog">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">معرض اللآلئ الرقمية</span>
+                <h2 class="section-title">استكشف الهواتف والإكسسوارات المتاحة</h2>
+                <div class="title-divider"><i class="fas fa-gem"></i></div>
+                <p class="section-desc">
+                    لمحة عن التشكيلة المتوفرة حالياً في صالتنا بشارع المدار. يمكنك حجز أي منتج والاستفسار عن تفاصيله وأسعاره المحدثة فورياً.
+                </p>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="filter-controls" id="filter-controls">
+                <button class="filter-btn active" data-filter="all" id="filter-all">الكل</button>
+                <button class="filter-btn" data-filter="phones" id="filter-phones">الهواتف الذكية</button>
+                <button class="filter-btn" data-filter="accessories" id="filter-accessories">الإكسسوارات الفاخرة</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="products-grid">
+                
+                <!-- Product 1: iPhone 15 Pro Max -->
+                <div class="product-card" data-category="phones" id="product-iphone15">
+                    <div class="product-badge badge-new">جديد</div>
+                    <div class="product-img-holder">
+                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=600&q=80" alt="iPhone 15 Pro Max" class="product-img">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-brand">Apple</span>
+                        <h3 class="product-name">iPhone 15 Pro Max</h3>
+                        <p class="product-specs">تيتانيوم طبيعي، سعة 256 جيجابايت، كاميرا احترافية فائقة الدقة.</p>
+                        <div class="product-meta">
+                            <span class="product-price">متوفر في المعرض</span>
+                            <a href="https://wa.me/218917001415?text=مرحباً%20لؤلؤ%20البحر%20الأولى%2C%20أود%20الاستفسار%20عن%20سعر%20وتوفر%20هاتف%20iPhone%2015%20Pro%20Max" target="_blank" class="btn btn-sm btn-gold-outline" id="inquire-iphone15">
+                                <i class="fab fa-whatsapp"></i> استفسر الآن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Galaxy S24 Ultra -->
+                <div class="product-card" data-category="phones" id="product-s24ultra">
+                    <div class="product-badge badge-used">شبه جديد</div>
+                    <div class="product-img-holder">
+                        <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&w=600&q=80" alt="Galaxy S24 Ultra" class="product-img">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-brand">Samsung</span>
+                        <h3 class="product-name">Galaxy S24 Ultra</h3>
+                        <p class="product-specs">تيتانيوم أسود، سعة 512 جيجابايت، مع قلم S-Pen وميزات الذكاء الاصطناعي.</p>
+                        <div class="product-meta">
+                            <span class="product-price">متوفر في المعرض</span>
+                            <a href="https://wa.me/218917001415?text=مرحباً%20لؤلؤ%20البحر%20الأولى%2C%20أود%20الاستفسار%20عن%20سعر%20وتوفر%20هاتف%20Galaxy%20S24%20Ultra" target="_blank" class="btn btn-sm btn-gold-outline" id="inquire-s24ultra">
+                                <i class="fab fa-whatsapp"></i> استفسر الآن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Apple Watch Ultra 2 -->
+                <div class="product-card" data-category="accessories" id="product-watchultra">
+                    <div class="product-badge badge-new">جديد</div>
+                    <div class="product-img-holder">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=600&q=80" alt="Apple Watch Ultra 2" class="product-img">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-brand">Apple</span>
+                        <h3 class="product-name">Apple Watch Ultra 2</h3>
+                        <p class="product-specs">إطار تيتانيوم 49 مم، مع حزام المحيط الأزرق الفاخر، تدعم نظام تحديد المواقع المزدوج.</p>
+                        <div class="product-meta">
+                            <span class="product-price">متوفر في المعرض</span>
+                            <a href="https://wa.me/218917001415?text=مرحباً%20لؤلؤ%20البحر%20الأولى%2C%20أود%20الاستفسار%20عن%20سعر%20وتوفر%20ساعة%20Apple%20Watch%20Ultra%202" target="_blank" class="btn btn-sm btn-gold-outline" id="inquire-watchultra">
+                                <i class="fab fa-whatsapp"></i> استفسر الآن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: AirPods Pro 2 -->
+                <div class="product-card" data-category="accessories" id="product-airpods">
+                    <div class="product-badge badge-new">جديد</div>
+                    <div class="product-img-holder">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="AirPods Pro 2" class="product-img">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-brand">Apple</span>
+                        <h3 class="product-name">AirPods Pro (الجيل الثاني)</h3>
+                        <p class="product-specs">عزل صوت نشط، شحن MagSafe مع سماعة مدمجة في علبة الشحن، جودة صوت نقية جداً.</p>
+                        <div class="product-meta">
+                            <span class="product-price">متوفر في المعرض</span>
+                            <a href="https://wa.me/218917001415?text=مرحباً%20لؤلؤ%20البحر%20الأولى%2C%20أود%20الاستفسار%20عن%20سعر%20وتوفر%20سماعة%20AirPods%20Pro%202" target="_blank" class="btn btn-sm btn-gold-outline" id="inquire-airpods">
+                                <i class="fab fa-whatsapp"></i> استفسر الآن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5: Anker Prime Power Bank -->
+                <div class="product-card" data-category="accessories" id="product-anker">
+                    <div class="product-badge badge-new">جديد</div>
+                    <div class="product-img-holder">
+                        <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=600&q=80" alt="Anker Prime Power Bank" class="product-img">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-brand">Anker</span>
+                        <h3 class="product-name">شاحن سفري Anker Prime 20K</h3>
+                        <p class="product-specs">قوة 20,000 مللي أمبير وشحن سريع بقدرة 200 واط مع شاشة ذكية لعرض معلومات الطاقة.</p>
+                        <div class="product-meta">
+                            <span class="product-price">متوفر في المعرض</span>
+                            <a href="https://wa.me/218917001415?text=مرحباً%20لؤلؤ%20البحر%20الأولى%2C%20أود%20الاستفسار%20عن%20سعر%20وتوفر%20شاحن%20Anker%20Prime%2020K" target="_blank" class="btn btn-sm btn-gold-outline" id="inquire-anker">
+                                <i class="fab fa-whatsapp"></i> استفسر الآن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6: iPhone 14 Pro -->
+                <div class="product-card" data-category="phones" id="product-iphone14">
+                    <div class="product-badge badge-used">مستعمل نظيف</div>
+                    <div class="product-img-holder">
+                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=600&q=80" alt="iPhone 14 Pro" class="product-img" style="filter: hue-rotate(90deg);">
+                    </div>
+                    <div class="product-details">
+                        <span class="product-brand">Apple</span>
+                        <h3 class="product-name">iPhone 14 Pro</h3>
+                        <p class="product-specs">لون ليلكي غامق، سعة 128 جيجابايت، نسبة البطارية 88%، خالي من الخدوش والعيوب تماماً.</p>
+                        <div class="product-meta">
+                            <span class="product-price">متوفر في المعرض</span>
+                            <a href="https://wa.me/218917001415?text=مرحباً%20لؤلؤ%20البحر%20الأولى%2C%20أود%20الاستفسار%20عن%20سعر%20وتوفر%20هاتف%20iPhone%2014%20Pro" target="_blank" class="btn btn-sm btn-gold-outline" id="inquire-iphone14">
+                                <i class="fab fa-whatsapp"></i> استفسر الآن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sell Your Phone Simulator Section -->
+    <section class="simulator-section" id="simulator">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">المحاكي الذكي للتقييم</span>
+                <h2 class="section-title">قدّر قيمة هاتفك في ثوانٍ معدودة</h2>
+                <div class="title-divider"><i class="fas fa-gem"></i></div>
+                <p class="section-desc">
+                    هل تملك هاتفاً وترغب في بيعه أو استبداله؟ استخدم حاسبتنا التفاعلية لتقدير قيمته التقريبية قبل زيارة صالتنا في شارع المدار.
+                </p>
+            </div>
+
+            <div class="simulator-card" id="valuation-simulator">
+                <!-- Step Progress Bar -->
+                <div class="steps-progress">
+                    <div class="progress-bar-inner" id="progress-bar-fill"></div>
+                    <div class="step-indicator active" data-step="1">1</div>
+                    <div class="step-indicator" data-step="2">2</div>
+                    <div class="step-indicator" data-step="3">3</div>
+                    <div class="step-indicator" data-step="4">4</div>
+                </div>
+
+                <form id="simulator-form" onsubmit="return false;">
+                    
+                    <!-- Step 1: Select Brand -->
+                    <div class="step-content active" data-step="1" id="step-1-content">
+                        <h3 class="step-title">أختر العلامة التجارية لهاتفك</h3>
+                        <div class="options-grid">
+                            <label class="option-card" id="label-brand-apple">
+                                <input type="radio" name="brand" value="Apple" class="hidden-radio" required>
+                                <span class="option-icon"><i class="fab fa-apple"></i></span>
+                                <span class="option-label">Apple</span>
+                            </label>
+                            <label class="option-card" id="label-brand-samsung">
+                                <input type="radio" name="brand" value="Samsung" class="hidden-radio">
+                                <span class="option-icon"><i class="fab fa-android text-success"></i></span>
+                                <span class="option-label">Samsung</span>
+                            </label>
+                            <label class="option-card" id="label-brand-other">
+                                <input type="radio" name="brand" value="Other" class="hidden-radio">
+                                <span class="option-icon"><i class="fas fa-mobile-alt"></i></span>
+                                <span class="option-label">علامة تجارية أخرى</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Select Model / Release Year -->
+                    <div class="step-content" data-step="2" id="step-2-content">
+                        <h3 class="step-title">اختر فئة الجهاز أو الموديل</h3>
+                        <div class="options-grid" id="model-options-container">
+                            <!-- Dynamic Content populated by app.js based on Brand -->
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Capacity / Storage -->
+                    <div class="step-content" data-step="3" id="step-3-content">
+                        <h3 class="step-title">اختر مساحة تخزين الهاتف</h3>
+                        <div class="options-grid">
+                            <label class="option-card" id="label-storage-128">
+                                <input type="radio" name="storage" value="128GB" class="hidden-radio" required>
+                                <span class="option-icon"><i class="fas fa-database"></i></span>
+                                <span class="option-label">128 جيجابايت</span>
+                            </label>
+                            <label class="option-card" id="label-storage-256">
+                                <input type="radio" name="storage" value="256GB" class="hidden-radio">
+                                <span class="option-icon"><i class="fas fa-database"></i></span>
+                                <span class="option-label">256 جيجابايت</span>
+                            </label>
+                            <label class="option-card" id="label-storage-512">
+                                <input type="radio" name="storage" value="512GB" class="hidden-radio">
+                                <span class="option-icon"><i class="fas fa-database"></i></span>
+                                <span class="option-label">512 جيجابايت أو أعلى</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Device Condition -->
+                    <div class="step-content" data-step="4" id="step-4-content">
+                        <h3 class="step-title">ما هي حالة الهاتف الخارجية؟</h3>
+                        <div class="options-grid flex-options">
+                            <label class="option-card" id="label-cond-like-new">
+                                <input type="radio" name="condition" value="like-new" class="hidden-radio" required>
+                                <span class="option-icon text-gold"><i class="fas fa-gem"></i></span>
+                                <span class="option-label">كالجديد (شبه وكالة)</span>
+                                <small class="option-subtext">خالي من الخدوش تماماً مع العلبة والأغراض</small>
+                            </label>
+                            <label class="option-card" id="label-cond-excellent">
+                                <input type="radio" name="condition" value="excellent" class="hidden-radio">
+                                <span class="option-icon"><i class="fas fa-check-circle"></i></span>
+                                <span class="option-label">ممتاز</span>
+                                <small class="option-subtext">خدوش طفيفة جداً غير مرئية</small>
+                            </label>
+                            <label class="option-card" id="label-cond-good">
+                                <input type="radio" name="condition" value="good" class="hidden-radio">
+                                <span class="option-icon"><i class="fas fa-info-circle"></i></span>
+                                <span class="option-label">مستعمل بحالة جيدة</span>
+                                <small class="option-subtext">خدوش طبيعية ناتجة عن الاستعمال بدون كسور</small>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Result (Calculated dynamic screen) -->
+                    <div class="step-content result-content" data-step="5" id="step-result-content">
+                        <div class="result-pearl-shell">
+                            <i class="fas fa-gem result-pearl-icon"></i>
+                        </div>
+                        <h3 class="result-title">التقييم التقديري لهاتفك هو:</h3>
+                        <div class="price-range" id="price-range-display">
+                            <span class="price-val" id="price-min">0</span> - <span class="price-val" id="price-max">0</span> <span class="price-currency">دينار ليبي</span>
+                        </div>
+                        <p class="result-note">
+                            * هذا التقييم تقريبي ومبني على المدخلات، يتطلب إتمام البيع فحصاً دقيقاً في صالتنا للتأكد من خلو الجهاز من الأعطال المخفية (الشاشة، البوردة، الكاميرات).
+                        </p>
+                        <div class="result-actions">
+                            <a href="#" target="_blank" class="btn btn-gold btn-lg" id="submit-valuation-whatsapp">
+                                <i class="fab fa-whatsapp"></i> أكد التقييم وتواصل معنا
+                            </a>
+                            <button type="button" class="btn btn-outline" id="restart-simulator-btn">
+                                <i class="fas fa-undo"></i> تقييم جهاز آخر
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Navigation buttons for steps -->
+                    <div class="simulator-nav-btns" id="simulator-nav-btns">
+                        <button type="button" class="btn btn-secondary" id="prev-step-btn" disabled>السابق</button>
+                        <button type="button" class="btn btn-gold" id="next-step-btn">التالي</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title">تواصل معنا وموقعنا</span>
+                <h2 class="section-title">تفضل بزيارتنا في صالتنا اليوم</h2>
+                <div class="title-divider"><i class="fas fa-gem"></i></div>
+                <p class="section-desc">
+                    نحن بانتظارك لتقديم تجربة تسوق راقية تلبي طموحاتك.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Details -->
+                <div class="contact-details-wrap" id="contact-info-panel">
+                    <div class="contact-item">
+                        <div class="contact-icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-text-box">
+                            <h4>الموقع الجغرافي</h4>
+                            <p>شارع المدار، طرابلس، ليبيا</p>
+                            <small class="text-muted">بجانب شركة المدار الجديد للاتصالات</small>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon-box"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-text-box">
+                            <h4>رقم الهاتف المباشر</h4>
+                            <p dir="ltr" class="text-right-aligned"><a href="tel:0917001415" class="phone-link">0917001415</a></p>
+                            <small class="text-muted">متاح للاتصال والاستفسار طوال ساعات العمل</small>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon-box"><i class="fab fa-whatsapp"></i></div>
+                        <div class="contact-text-box">
+                            <h4>محادثة واتساب سريعة</h4>
+                            <p dir="ltr" class="text-right-aligned"><a href="https://wa.me/218917001415" target="_blank" class="phone-link">+218 91 700 1415</a></p>
+                            <small class="text-muted">راسلنا فورياً لمعرفة الأسعار المحدثة</small>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon-box"><i class="fas fa-clock"></i></div>
+                        <div class="contact-text-box">
+                            <h4>ساعات العمل والصالة</h4>
+                            <p>السبت - الخميس: من 10:00 صباحاً حتى 10:00 مساءً</p>
+                            <p>الجمعة: عطلة أسبوعية</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Map container -->
+                <div class="map-wrap" id="map-panel">
+                    <div id="map" class="styled-map"></div>
+                    <div class="map-overlay-info">
+                        <i class="fas fa-info-circle text-gold"></i>
+                        <span>انقر على الخريطة للاتجاهات المباشرة إلى شارع المدار.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="logo-area">
+                    <img src="assets/logo.png" alt="شعار لؤلؤ البحر الأولى" class="logo-img" id="footer-logo">
+                    <span class="logo-text text-white">لؤلؤ البحر <span class="gold-gradient-text">الأولى</span></span>
+                </div>
+                <p class="footer-tagline">بريق اللؤلؤ وقمة التطور في عالم الهواتف الذكية والإكسسوارات.</p>
+                <div class="footer-socials">
+                    <a href="https://wa.me/218917001415" target="_blank" aria-label="واتساب" id="social-wa"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="فيسبوك" id="social-fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="إنستغرام" id="social-ig"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#hero">الرئيسية</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#catalog">معرض الهواتف</a></li>
+                    <li><a href="#simulator">حاسبة التقييم</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>لماذا لؤلؤ البحر الأولى؟</h4>
+                <p>لأننا نؤمن بأن الأمان وجودة الجهاز هي القيمة الحقيقية للعميل، ولأننا نقدم صالة بيع وشراء حقيقية تمنحك الثقة وراحة البال عند كل معاملة.</p>
+                <div class="footer-certification">
+                    <i class="fas fa-certificate text-gold"></i> <span>مرخص تجارياً في ليبيا</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 لؤلؤ البحر الأولى. جميع الحقوق محفوظة. صُمم ببريق اللؤلؤ وشغف التقنية.</p>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS for Maps -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Custom App Script -->
+    <script src="app.js"></script>
+</body>
+</html>
